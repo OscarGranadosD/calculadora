@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+    <!--    Paso 1. Declaración de Variables -->
+    let num01 = 10;
+    let num02 = 5;
+    let operacion = prompt("Indique la operación que desea realizar: suma | resta | multiplicación | división")
+    /*
+    if (operacion == "suma"){
+        resultado = num01 + num02
+    } else if (operacion == "resta"){
+        resultado = num01 - num02
+    } else if (operacion == "multiplicación"){
+        resultado = num01 * num02
+    } else {
+        resultado = num01 / num02
+    }
+    */
+    let resultado = 0;
+    switch(operacion){
+        case "resta":
+        resultado = num01 - num02
+        break
+        case "multiplicación":
+        resultado = num01 * num02
+        break
+        case "división":
+        resultado = num01 / num02
+        break
+        default :
+        resultado = num01 + num02;
+        operacion = "suma"
+        break
+    }
+
+    document.write("El resultado de la [ " + operacion +" ] seleccionada  es " +resultado)
+
+    </script>
+</body>
+</html>

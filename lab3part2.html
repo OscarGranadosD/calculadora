@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+    function realizarOperacion(num01, num02, operacion){
+        
+        if (operacion == "resta"){
+            resultado = num01 - num02
+        } else if (operacion == "multiplicación"){
+            resultado = num01 * num02
+        } else if (operacion == "división"){
+            resultado = num01 / num02
+        } else {
+            resultado = num01 + num02
+        }
+        return resultado
+    }
+   
+
+    <!--    Paso 2. Función para realizar operaciones -->
+    let num01 = parseInt(prompt("Ingrese su primer operador: "));
+    let num02 = parseInt(prompt("Ingrese su segundo operador: "));
+    let operacion = prompt("Indique la operación que desea realizar: suma | resta | multiplicación | división")
+    resultado = realizarOperacion(num01, num02, operacion)
+
+    document.write("El resultado de la [ " + operacion +" ] seleccionada  es " +resultado)
+
+    </script>
+</body>
+</html>

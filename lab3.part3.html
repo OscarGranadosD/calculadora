@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+    function validarCero(num01,num02, operacion){
+        if (num02 != 0){
+        resultado = realizarOperacion(num01, num02, operacion)
+        } else if ((num02 == 0) && (operacion == "división")) {
+            document.write("ALERTA! - la división entre cero es indeterminada")
+        } else if ((num02 == 0) && (operacion == "multiplicación")){
+            document.write ("Todo número multiplicado por cero es igual a cero")
+        } else {
+            document.write ("La suma y la resta con cero da como resultado el mismo número")
+        }
+    }
+
+    function realizarOperacion(num01, num02, operacion){
+        if (operacion == "suma"){
+            resultado = num01 + num02
+        } else if (operacion == "resta"){
+            resultado = num01 - num02
+        } else if (operacion == "multiplicación"){
+            resultado = num01 * num02
+        } else if (operacion == "división"){
+            resultado = num01 / num02
+        } else {
+            resultado = "*** Operación NO válida ***"
+        }
+        return resultado
+    }
+   
+
+   // solicitud datos al usuario por teclado
+    let num01 = parseInt(prompt("Ingrese su primer operador: "));
+    let num02 = parseInt(prompt("Ingrese su segundo operador: "));
+    let operacion = prompt("Indique la operación que desea realizar: suma | resta | multiplicación | división")
+
+    // validar indeterminación y entregar resultado
+    validarCero(num01,num02, operacion)
+    document.write("El resultado de la [ " + operacion +" ] seleccionada  es " +resultado)
+
+    </script>
+</body>
+</html>
